@@ -1,0 +1,39 @@
+{
+	"variables": [],
+	"info": {
+		"name": "SP without Entity",
+		"_postman_id": "e0826b1f-0a82-d095-83ed-e098a2bc96fc",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "SP With Out Entity Table",
+			"request": {
+				"url": "http://localhost:8088/",
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Addition SP sample",
+			"request": {
+				"url": "http://localhost:8088/7/10",
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		}
+	]
+}
