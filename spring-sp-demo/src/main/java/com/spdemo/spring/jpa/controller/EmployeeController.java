@@ -20,7 +20,7 @@ public class EmployeeController {
 	private EmployeeRepository employeeRepository;
 
 	@RequestMapping(value = "/", method = RequestMethod.GET)
-	public ResponseEntity<List<Employees>> getAllEmployees() {
+	public ResponseEntity<List<Employees>> getAllEmployees() throws Exception {
 		return new ResponseEntity<>(employeeRepository.getAllEmployees(), HttpStatus.OK);
 
 	}

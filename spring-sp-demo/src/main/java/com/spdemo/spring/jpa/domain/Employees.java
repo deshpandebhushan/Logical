@@ -2,20 +2,18 @@ package com.spdemo.spring.jpa.domain;
 
 import java.io.Serializable;
 
-import org.springframework.stereotype.Component;
 
-@Component
 public class Employees implements Serializable {
-	private long employeeID;
+	private int employeeID;
 	private String firstName;
 	private String lastName;
 	private String address;
 
-	public long getEmployeeID() {
+	public int getEmployeeID() {
 		return employeeID;
 	}
 
-	public void setEmployeeID(long employeeID) {
+	public void setEmployeeID(int employeeID) {
 		this.employeeID = employeeID;
 	}
 
@@ -43,4 +41,13 @@ public class Employees implements Serializable {
 		this.address = address;
 	}
 
+	public Employees(int employeeID, String firstName, String lastName, String address) {
+		super();
+		this.employeeID = employeeID;
+		this.firstName = firstName;
+		this.lastName = lastName;
+		this.address = address;
+	}
+
+	
 }
