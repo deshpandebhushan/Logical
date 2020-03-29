@@ -59,3 +59,16 @@ CREATE TABLE `oauth_refresh_token` (
   `token` mediumblob,
   `authentication` mediumblob
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+USE `demo_database`;
+DROP procedure IF EXISTS `get_All_Employees`;
+
+DELIMITER $$
+USE `demo_database`$$
+CREATE PROCEDURE `get_All_Employees` ()
+BEGIN
+select * from employees;
+END
+$$
+
+DELIMITER ;

@@ -57,11 +57,5 @@ public class SecurityOAuth2Configuration extends AuthorizationServerConfigurerAd
 		endpoints.tokenStore(tokenStore());
 	}
 
-	/*
-	 * @Override public void configure(final AuthorizationServerEndpointsConfigurer
-	 * endpoints) throws Exception {
-	 * endpoints.tokenStore(tokenStore()).authenticationManager(
-	 * authenticationManager).accessTokenConverter(defaultAccessTokenConverter())
-	 * .userDetailsService(userDetailsService); }
-	 */
+	
 }
