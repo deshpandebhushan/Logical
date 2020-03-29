@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+    //alert();
+	var param = {
+                username: "admin",
+                password: "admin@123",
+                grant_type: "password"
+            };
+	var requestUrl = "http://localhost:8088/oauth/token";
+	$("form#data").submit(function(e) {
+    e.preventDefault();    
+    var formData = new FormData(this);
+
+    $.ajax({
+        url: requestUrl,
+        type: 'POST',
+        data: formData,
+        success: function (data) {
+            alert(data)
+        },
+		beforeSend: function(xhr) {
+			xhr.setRequestHeader("Authorization", "Basic " + btoa('client' + ":" + "password"));
+		},
+        cache: false,
+        contentType: false,
+        processData: false
+    });
+});
+	
+});
+</script>
+</head>
+<body>
+<form id="data" method="post" enctype="multipart/form-data">
+    <input type="text" name="username" value="admin" />
+    <input type="text" name="password" value="admin@123" />
+    <input type="text" name="grant_type" value="password" />
+    <button>Submit</button>
+</form>
+</body>
+</html>
